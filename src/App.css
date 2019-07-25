@@ -1,32 +1,308 @@
-.App {
-  text-align: center;
+.TopNavbar {
+  background-color: #333333;
+  height: 8vh;
+  width: 100%;
+  border: 1px solid #gray;
+  top: 0;
+  position: sticky;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.NavItems {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  list-style: none;
+  position: sticky;
 }
 
-.App-link {
-  color: #61dafb;
+.LogoButton {
+  color: #ed8c4b;
+  justify-content: center;
+  align-items: center;
+  /* text: #73AD21; */
+  background-color: #111111;
+  height: 5.8vh;
+  width: 10vh;
+  padding: 1vh;
+  margin: 0px 0;
+  font-size: 4vh;
+  border-radius: 0vh;
+  user-select: none;
+  border: none;
+  box-shadow:
+    0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.NavButtonTrad {
+  color: #04ff00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  height: 5.5vh;
+  width: 16vh;
+  padding: 1vh;
+  margin: 0px 0;
+  font-size: 3vh;
+  border-radius: 15px;
+  user-select: none;
+  border: none;
+  box-shadow:
+    0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  transition: .7s;
+}
+
+.NavButtonTrad:hover {
+  box-shadow:
+    0px 2px 6px 0px #04ff00,
+    0px 2px 2px 0px #04ff00,
+    0px 4px 2px -2px #04ff00;
+}
+
+/* .NavButtonTrad:hover {
+  transition: .4s;
+  color: black;
+  background-color: #04ff00;
+} */
+.NavButtonTrad.selected {
+  background-color: #04ff00;
+  color: black;
+  transition: .7s;
+}
+
+.NavButtonKrav {
+  color: cyan;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: gray;
+  height: 5.5vh;
+  width: 16vh;
+  padding: 1vh;
+  margin: 0px 0;
+  font-size: 3vh;
+  border-radius: 15px;
+  user-select: none;
+  border: none;
+  box-shadow:
+    0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  transition: .7s;
+}
+
+.NavButtonKrav:hover {
+  box-shadow:
+    0px 2px 6px 0px cyan,
+    0px 2px 2px 0px cyan,
+    0px 4px 2px -2px cyan;
+  transition: .4s;
+}
+
+.NavButtonKrav.selected {
+  color: black;
+  background-color: cyan;
+  transition: .7s;
+}
+
+.NavButtonWeap {
+  color: #fa432a;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: gray;
+  height: 5.5vh;
+  width: 16vh;
+  padding: 1vh;
+  margin: 0px 0;
+  font-size: 3vh;
+  border-radius: 15px;
+  user-select: none;
+  border: none;
+  box-shadow:
+    0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  transition: .7s;
+}
+
+.NavButtonWeap:hover {
+  transition: .4s;
+  box-shadow:
+    0px 2px 6px 0px #fa432a,
+    0px 2px 2px 0px #fa432a,
+    0px 4px 2px -2px #fa432a;
+}
+
+.NavButtonWeap.selected {
+  transition: .4s;
+  color: black;
+  background-color: #fa432a;
+}
+
+.NavButtonGlos {
+  color: #f542d4;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: gray;
+  height: 5.5vh;
+  width: 16vh;
+  padding: 1vh;
+  margin: 0px 0;
+  font-size: 3vh;
+  border-radius: 15px;
+  user-select: none;
+  border: none;
+  box-shadow:
+    0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  transition: .7s;
+}
+
+.NavButtonGlos:hover {
+  transition: .4s;
+  box-shadow:
+    0px 2px 6px 0px #f542d4,
+    0px 2px 2px 0px #f542d4,
+    0px 4px 2px -2px #f542d4;
+}
+
+.NavButtonGlos.selected {
+  transition: .4s;
+  background-color: #f542d4;
+  color: black;
+}
+
+.NavButtonPhil {
+  color: #ed8c4b;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: gray;
+  height: 5.5vh;
+  width: 16vh;
+  padding: 1vh;
+  margin: 0px 0;
+  font-size: 3vh;
+  border-radius: 15px;
+  user-select: none;
+  border: none;
+  box-shadow:
+    0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  transition: .7s,
+}
+
+.NavButtonPhil:hover {
+  box-shadow:
+    0px 2px 6px 0px #ed8c4b,
+    0px 2px 2px 0px #ed8c4b,
+    0px 4px 2px -2px #ed8c4b;
+  transition: .4s;
+}
+
+.NavButtonPhil.selected {
+  transition: .4s;
+  color: black;
+  background-color: #ed8c4b;
+}
+
+.SettingsButton {
+  justify-content: center;
+  align-items: center;
+  background-color: #131c2b;
+  height: 5.5vh;
+  width: 10vh;
+  padding: 1vh;
+  margin: 0px 0;
+  font-size: 2vh;
+  border-radius: 0px;
+  user-select: none;
+  border: none;
+  box-shadow:
+    0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.SideBars>div {
+  background-color: #494f59;
+  position: fixed;
+  min-width: 250px;
+  width: 16vw;
+  top: 8vh;
+  bottom: 0;
+  left: 0;
+  transition: left .4s;
+}
+
+.SideBars .closed {
+  left: -255px;
+}
+
+.SideBars .open {
+  left: 0;
+}
+
+.TraditionalSideBar {
+  border: 2px solid #73AD21;
+}
+
+.KravSideBar {
+  border: 2px solid cyan;
+}
+
+.WeaponsSideBar {
+  border: 2px solid #fa432a;
+}
+
+.GlossarySideBar {
+  border: 2px solid #bc2afa;
+}
+
+.PhilosophySideBar {
+  border: 2px solid #FFD700;
+}
+
+.TradSideBarBasicsList {
+  padding: 0px;
+  list-style: none;
+}
+
+.TradSideBarBasicsList li {
+  padding: 2px;
+}
+
+.TradSideBarBasicsList li:hover {
+  background-color: lightgrey;
+}
+
+.TradSideBarFormsList {
+  padding: 4px;
+  list-style: none;
+  left: 0;
+}
+
+.TradSideBarFormsList li:hover {
+  background-color: lightgrey;
+}
+
+.AfterFuck {
+  background-color: lightgrey;
+  top: 0vh;
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
