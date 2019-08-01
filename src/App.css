@@ -152,7 +152,7 @@
     0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
-.SideBars>div {
+.SideBars > div {
   background-color: #494f59;
   position: fixed;
   min-width: 250px;
@@ -161,7 +161,22 @@
   bottom: 0;
   left: 0;
   transition: left .4s;
+
+  overflow-y: auto;
 }
+
+.SideBars > div::-webkit-scrollbar {
+  width: 5px;
+}
+
+.SideBars > div::-webkit-scrollbar-track {
+  background-color: #0000;
+}
+
+.SideBars > div::-webkit-scrollbar-thumb {
+  border-radius: 2.5px;
+}
+
 
 .SideBars .closed {
   left: -255px;
@@ -175,20 +190,42 @@
   border: 2px solid #73AD21;
 }
 
+.TraditionalSideBar::-webkit-scrollbar-thumb {
+  background-color: #639D11;
+}
+
+
 .KravSideBar {
   border: 2px solid cyan;
+}
+
+.KravSideBar::-webkit-scrollbar-thumb {
+  background-color: #0ee;
 }
 
 .WeaponsSideBar {
   border: 2px solid #fa432a;
 }
 
+.WeaponsSideBar::-webkit-scrollbar-thumb {
+  background-color: #ea33aa;
+}
+
 .GlossarySideBar {
   border: 2px solid #bc2afa;
 }
 
+.GlossarySideBar::-webkit-scrollbar-thumb {
+  background-color: #ac1aea;
+}
+
+
 .PhilosophySideBar {
   border: 2px solid #FFD700;
+}
+
+.PhilosophySideBar::-webkit-scrollbar-thumb {
+  background-color: #efc700;
 }
 
 .TradSideBarBasicsList {
